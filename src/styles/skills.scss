@@ -1,0 +1,78 @@
+.skill {
+  scroll-snap-align: start;
+  background-color: #edcee9;
+  padding: 50px 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr;
+  justify-content: space-around;
+  align-items: center;
+
+  &__title {
+    width: fit-content;
+    padding: 5px 10px;
+    text-align: center;
+    margin: 20px auto;
+    text-decoration: underline;
+  }
+  &__row {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+  }
+
+  &__wrapper {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &__image {
+    margin-bottom: 15px;
+    padding: 5px;
+    height: 90px;
+  }
+}
+
+@media (min-width: 520px) {
+  .skill {
+    &__image {
+      height: 120px;
+    }
+
+    &__row {
+      width: 60vw;
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .skill__row {
+    flex-wrap: nowrap;
+  }
+}
+
+//animations
+
+.slide-left {
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.slide-right {
+  transform: translateX(50%);
+  opacity: 0;
+}
+
+.slide-left,
+.slide-right {
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+.appear {
+  opacity: 1;
+  transform: TranslateX(0%);
+}

@@ -1,0 +1,62 @@
+$primaryGrad: linear-gradient(to left, rgb(235, 69, 138), rgb(230, 106, 213));
+$primaryBackgroundColor: #fff;
+$cardHeight: 40vh;
+
+@import "./navbar.scss";
+@import "./header.scss";
+@import "./skills.scss";
+@import "./projects.scss";
+@import "./footer.scss";
+@import "./course.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  font-family: "Oxanium", cursive;
+}
+
+h1,
+h2,
+h3 {
+  background: linear-gradient(to left, rgb(112, 101, 214), rgb(230, 106, 213));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+.projects {
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .pr-card {
+    width: 90%;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-background {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video-background {
+    width: auto;
+    height: 100%;
+  }
+}
