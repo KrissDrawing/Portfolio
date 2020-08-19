@@ -10,9 +10,7 @@ export const navSlide = () => {
       if (link.style.animation) {
         link.style.animation = "";
       } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${
-          index / 7 + 0.5
-        }s`;
+        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
       }
     });
 
@@ -21,10 +19,8 @@ export const navSlide = () => {
 };
 
 export const navScroll = () => {
-  // const nav = document.querySelector('.nav-links');
   const nav = document.querySelector(".nav-bg");
 
-  console.log(window.scrollY);
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
       nav.classList.add("shrink");

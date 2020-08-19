@@ -1,3 +1,13 @@
 .footer {
   scroll-snap-align: end;
 }
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > p {
+    margin: 0 10px;
+  }
+}
